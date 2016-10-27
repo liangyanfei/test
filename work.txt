@@ -1,0 +1,82 @@
+
+=====on PC without virtual machine========
+
+1. Download ubuntu
+	http://releases.ubuntu.com/14.04/
+
+2. Install Docker
+	https://docs.docker.com/engine/installation/linux/ubuntulinux/
+
+3. Install GenneDock
+	https://github.com/genedock/common/blob/master/gddeploy/docs/deploy_standalone.md
+
+4. Virtual machine location
+	C:\Users\user\Documents\Virtual Machines\
+
+
+=======download location of docker-toolbox(using thunder)====
+
+https://github.com/docker/toolbox/releases/download/v1.12.2/DockerToolbox-1.12.2.pkg
+
+
+======install gendock service=======
+1. generate ssh rsa key by below command
+   ssh-keygen -b 1024 -t rss
+   
+   enter space key for all steps
+
+2. go to gitbub
+   “View profile and more” ==> “Settings” ==> SSH and GPG keys ==> New SSH key
+   copy and paste public key in to the text box.
+
+3. Then execute installation steps from 
+   https://github.com/docker/toolbox/releases/download/v1.12.2/DockerToolbox-1.12.2.pkg
+
+git clone git@github.com:genedock/common.git --depth=1
+git clone git@github.com:genedock/bioservice.git --depth=1
+git clone git@github.com:genedock/frontline.git --depth=1
+cd /usr/local/deploy/common/gddeploy
+sudo python setup.py install
+cd /usr/local/deploy/common/genedock
+sudo python setup.py install
+cd /usr/local/deploy/common/gdconfig
+sudo python setup.py install    #failed
+
+
+code_dir = 
+conf_path = 
+
+/Users/liangyanfei/deploy/conf/config.ini
+   db_name = liangyanfeiblastshare
+
+
+==install brew==
+git clone https://github.com/Homebrew/linuxbrew.git ~/.linuxbrew
+
+Add to your .bashrc or .zshrc:
+
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
+
+
+docker login https://cn-beijing-registry.genedock.com
+docker login https://cn-beijing-registry.genedock.com
+ID:admin@echogenedoc(ID/orgnazation of product web site)
+pwd:pwd of product web site
+
+
+
+=====MacDown==========
+
+doc location
+/Users/liangyanfei/deploy/frontline/WWW/public/docs/mds
+how-to-workflow.md
+
+
+关于如何制作镜像、配置工具和工作流的文档和生信都是相关的，都打上一个bioinfo的标签
+
+***http://localhost 如果无法访问本地部署的genedock主页，请先检查运行docker的虚拟机中nginx是否已经启动 （ps -ef|grep nginx）
+
+
+
+
