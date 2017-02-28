@@ -81,3 +81,5 @@ how-to-workflow.md
 add one more line
 
 add from master branck
+
+update work.txt from conflict_1
