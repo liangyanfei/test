@@ -1,2 +1,4 @@
 this is a new file added via github
 add one more line to this file.
+
+update test-add-new-file.txt from conflict_2
